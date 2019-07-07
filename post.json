@@ -1,0 +1,80 @@
+{
+  "ticket": {
+    "subject": "Example Ticket",
+    "workflow": {
+      "name": "Tufinnovate 2019"
+    },
+    "steps": {
+      "step": [
+        {
+          "name": "Open request",
+          "tasks": {
+            "task": [
+              {
+                "fields": {
+                  "field": [
+                    {
+                      "name": "Requested Access",
+                      "@xsi.type": "multi_access_request",
+                      "access_request": [
+                        {
+                          "targets": {
+                            "target": [
+                              {
+                                "@type": "Object",
+                                "management_name": "CMA-R80",
+                                "object_name": "Standard"
+                              }
+                            ]
+                          },
+                          "sources": {
+                            "source": [
+                              {
+                                "@type": "Object",
+                                "object_name": "name",
+                                "management_name": "name"
+                              }
+                            ]
+                          },
+                          "destinations": {
+                            "destination": [
+                              {
+                                "@type": "IP",
+                                "ip_address": "10.1.1.1",
+                                "netmask": "255.255.255.255",
+                                "cidr": 32
+                              }
+                            ]
+                          },
+                          "services": {
+                            "service": [
+                              {
+                                "@type": "PROTOCOL",
+                                "protocol": "TCP",
+                                "port": 123
+                              }
+                            ]
+                          },
+                          "action": "Accept"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Summary",
+                      "@xsi.type": "text_area",
+                      "text": "A summary"
+                    }
+                  ]
+                },
+                "status": "DONE"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "domain_name": "",
+    "requester_id": 4,
+    "priority": "Normal"
+  }
+}
